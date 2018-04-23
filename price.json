@@ -1,0 +1,117 @@
+{
+  "config"  : {
+    "default_duration"  : {
+      "pod" : {
+        "value"  : 60,
+        "unit"  : "second"
+      },
+      "rootfs"  : {
+        "value"  : 60,
+        "unit"  : "second"
+      },
+      "volume"  : {
+        "value"  : 60,
+        "unit"  : "second"
+      },
+      "service" : {
+        "value"  : 3600,
+        "unit"  : "second"
+      },
+      "fip" : {
+        "value"  : 3600,
+        "unit"  : "second"
+      }
+    }
+  },
+  "region"  : {
+    "gcp-us-central1": {
+      "pod" : [
+        {
+          "name": "S1",
+          "price": 0.00000222,
+          "punit": "second",
+          "cpu": 1,
+          "memory": 64
+        },
+        {
+          "name": "S2",
+          "price": 0.00000354,
+          "punit": "second",
+          "cpu": 1,
+          "memory": 128
+        },
+        {
+          "name": "S3",
+          "price": 0.00000564,
+          "punit": "second",
+          "cpu": 1,
+          "memory": 256
+        },
+        {
+          "name": "S4",
+          "price": 0.000009,
+          "punit": "second",
+          "cpu": 1,
+          "memory": 512
+        },
+        {
+          "name": "M1",
+          "price": 0.0000144,
+          "punit": "second",
+          "cpu": 1,
+          "memory": 1024
+        },
+        {
+          "name": "M2",
+          "price": 0.0000288,
+          "punit": "second",
+          "cpu": 2,
+          "memory": 2048
+        },
+        {
+          "name": "M3",
+          "price": 0.0000576,
+          "punit": "second",
+          "cpu": 2,
+          "memory": 4096
+        },
+        {
+          "name": "L1",
+          "price": 0.0001152,
+          "punit": "second",
+          "cpu": 4,
+          "memory": 8192
+        },
+        {
+          "name": "L2",
+          "price": 0.0002304,
+          "punit": "second",
+          "cpu": 8,
+          "memory": 16384
+        }
+      ],
+      "rootfs": {
+        "name": "Rootfs",
+        "price": 0.0000000386,
+        "punit": "second",
+        "unit": "GB"
+      },
+      "volume": {
+        "name": "Volume",
+        "price": 0.0000000386,
+        "punit": "second",
+        "unit": "GB"
+      },
+      "service": {
+        "name": "Service",
+        "price": 0.03,
+        "punit": "hour"
+      },
+      "fip": {
+        "name": "Floating IP",
+        "price":0.01,
+        "punit": "hour"
+      }
+    }
+  }
+}

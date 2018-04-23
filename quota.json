@@ -1,0 +1,7 @@
+{
+	"pod" 		: 20,
+	"volume"	: 40,
+	"service"	: 5,
+	"fip"		: 5,
+	"credential": 3
+}
