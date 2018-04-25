@@ -5,7 +5,7 @@ What is Pi?
 
 _Pi_ is a **Serverless Container Platform**. It is the simplest and fastest way to run containers in the cloud, bypassing all those infrastructure headaches, to let companies of all sizes embrace the value of containers immediately.
 
-_Pi_ is "Serverless" because there is no VM node, nor cluster in the system. To run containers, the only thing to do is to call Pi' RESTful API. 
+_Pi_ is "Serverless" because there is no VM node, nor cluster in the system. To run containers, the only thing to do is to call Pi' RESTful API.
 
 You might compare _Pi_ with [Function-as-a-Service](https://en.wikipedia.org/wiki/Function_as_a_service), with the difference that it runs Docker image, not function.
 
@@ -26,16 +26,7 @@ You might compare _Pi_ with [Function-as-a-Service](https://en.wikipedia.org/wik
 </tr>
 </table>
 
-How It Works
------------------------------
-_Pi_ provides the standard, upstream Kubernetes Pod APIs, for you to run containers. To do it, the steps are:
 
-- Build Docker images
-- Push the images to a registry
-- Define your pod spec
-- Call _Pi_ API to launch containers
-
-![](https://trello-attachments.s3.amazonaws.com/5700ea0da7030dcf7485ed70/5a925f6876dffe63a7833232/f23ca2bf403b51b9937558ce831ec357/image.png)
 
 Benefits
 -----------------------------
@@ -61,8 +52,8 @@ _Pi_ provides the following features:
 
 - [**Pod**](../Feature/pod.md) - atomic group of one or more containers.
 
-- [**Rootfs**](../Feature/rootfs.md) - temporary disk space for containers in the pod, available along with the pod lifecycle. 
-    
+- [**Rootfs**](../Feature/rootfs.md) - temporary disk space for containers in the pod, available along with the pod lifecycle.
+
 - [**Volume**](../Feature/volume.md) - persistent storage for stateful workload, automatically replicated to protect your data from failures.
 
 - [**Network**](../Feature/network.md) - Layer-2 private network dedicated to your account to isolate your traffic from the rest customers.
