@@ -1,5 +1,3 @@
-# Info
-
 Get
 ---------------------------------
 get region and account info
