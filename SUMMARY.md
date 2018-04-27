@@ -29,6 +29,7 @@
 			* [create](Reference/CLI/pod/create.md)
 			* [get](Reference/CLI/pod/get.md)
 			* [exec](Reference/CLI/pod/exec.md)
+			* [run](Reference/CLI/pod/run.md)
 			* [delete](Reference/CLI/pod/delete.md)
 		* [Service](Reference/CLI/service/index.md)
 			* [create](Reference/CLI/service/create.md)

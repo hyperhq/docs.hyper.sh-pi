@@ -14,12 +14,12 @@ Account Info:
   DefaultZone            gcp-us-central1-b
   Resources              pod:1/20,volume:1/40,fip:1/5,service:4/5,secret:1/3
 Version Info:
-  Version                alpha-0.3
-  Hash                   0ade6742
-  Build                  2018-04-13T10:16:19+0800
+  Version                v1.9-b18042723
+  Hash                   beb46e81
+  Build                  2018-04-27T23:33:59+0800
 
 
-//check new version of pi
+//force to check new version of pi
 $ pi info --check-update
 ```
 
