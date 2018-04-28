@@ -52,14 +52,14 @@ spec:
     flexVolume:
       options:
         volumeID: "vol1"
-$ pi pod create -f /tmp/testvol.yml
+$ pi create -f /tmp/testvol.yml
 pod "testvol" created
 ```
 
 To verify the mount:
 
 ```sh
-$ pi pod exec testvol -c test -- df -hT
+$ pi exec testvol -c test -- df -hT
 Filesystem           Type            Size      Used Available Use% Mounted on
 /dev/sdb             ext4            9.7G     37.3M      9.2G   0% /
 devtmpfs             devtmpfs      242.5M         0    242.5M   0% /dev
@@ -95,15 +95,15 @@ spec:
     flexVolume:
       options:
         volumeID: "vol1"
-$ pi pod create -f /tmp/testvol.yml
+$ pi create -f /tmp/testvol.yml
 pod "multi-mount" created
 ```
 
 Verify
 
 ```sh
-$ pi pod exec multi-mount -c test1 -- echo "Hello World" > /data/helloworld.txt
-$ pi pod exec multi-mount -c test2 -- cat /mnt/data/helloworld.txt
+$ pi exec multi-mount -c test1 -- echo "Hello World" > /data/helloworld.txt
+$ pi exec multi-mount -c test2 -- cat /mnt/data/helloworld.txt
 Hello World
 ```
 
