@@ -25,15 +25,15 @@ spec:
   - name: nginx
     image: nginx
 EOF
-$ pi pod create -f /tmp/multi-basic.yml
+$ pi create -f /tmp/multi-basic.yml
 pod "multi-basic" created
 ```
 
 You can access a particular container by specifying the container name in the `pod exec` command:
 
 ```sh
-$ pi pod exec multi-basic --container nginx -- /bin/sh
-TODO
+$ pi exec -it multi-basic --container busybox -- /bin/sh
+$ pi exec -it multi-basic -c nginx -- /bin/sh
 ```
 
 > Note:
@@ -42,9 +42,9 @@ TODO
 Now, let's these two containers' filesystem:
 
 ```sh
-$ pi pod exec multi-basic --container busybox -- file /etc/nginx.conf
-/etc/nginx.conf: cannot open `/etc/nginx.conf' (No such file or directory)
-$
-$ pi pod exec multi-basic --container nginx -- file /etc/nginx.conf
+$ pi exec multi-basic --container busybox -- file /etc/nginx.conf
+/etc/nginx.conf: cannot open '/etc/nginx.conf' (No such file or directory)
+
+$ pi exec multi-basic --container nginx -- file /etc/nginx.conf
 /etc/nginx/nginx.conf: ASCII English text
 ```

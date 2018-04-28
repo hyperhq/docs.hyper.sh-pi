@@ -20,8 +20,10 @@ You might compare _Pi_ with [Function-as-a-Service](https://en.wikipedia.org/wik
 <tr>
 <td>Supported Language</td><td>Anything (Code, Binary, Shell Script, etc.)</td><td>Limited</td>
 </tr>
+<tr>
 <td>API</td><td>Kubernetes Pod API</td><td>AWS Specific</td>
 </tr>
+<tr>
 <td>Execution Instance</td><td>Container (Pod)</td><td>Function Call</td>
 </tr>
 </table>

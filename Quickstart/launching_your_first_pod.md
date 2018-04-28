@@ -25,61 +25,53 @@ With Pi, a pod receives a certain amount computational resources (CPU, RAM). The
 Before we look at alpine itself, let’s take a look at how you can inspect your pod. 
 
 ```sh
-$ pi get pods nginx -o yaml
+$ pi get pods alpine -o yaml
 apiVersion: v1
-items:
-- apiVersion: v1
-  kind: Pod
-  metadata:
-    annotations:
-      id: a0eabb46fccd616f4a22cbeec8547c344c3a85b7a1b95c1f88c17bb4d27b1267
-      sh_hyper_instancetype: s4
-      zone: gcp-us-central1-b
-    creationTimestamp: 2018-04-08T14:39:52Z
-    labels:
-      app: nginx
-    name: nginx
-    namespace: default
-    uid: b2aa75df-3b3a-11e8-b8a4-42010a000032
-  spec:
-    containers:
-    - image: nginx
-      name: nginx
-      resources: {}
-    nodeName: gcp-us-central1
-  status:
-    conditions:
-    - lastProbeTime: null
-      lastTransitionTime: 2018-04-08T14:39:52Z
-      status: "True"
-      type: Initialized
-    - lastProbeTime: null
-      lastTransitionTime: 2018-04-08T14:39:56Z
-      status: "True"
-      type: Ready
-    - lastProbeTime: null
-      lastTransitionTime: 2018-04-08T14:39:52Z
-      status: "True"
-      type: PodScheduled
-    containerStatuses:
-    - containerID: hyper://2a077fec7051be72cb9435a7114c66c0d43cf66e7f6667cb34b28eeeea374a54
-      image: sha256:c5c4e8fa2cf7d87545ed017b60a4b71e047e26c4ebc71eb1709d9e5289f9176f
-      imageID: sha256:c5c4e8fa2cf7d87545ed017b60a4b71e047e26c4ebc71eb1709d9e5289f9176f
-      lastState: {}
-      name: nginx
-      ready: true
-      restartCount: 0
-      state:
-        running:
-          startedAt: 2018-04-08T14:39:56Z
-    phase: Running
-    podIP: 10.244.58.203
-    qosClass: Burstable
-    startTime: 2018-04-08T14:39:52Z
-kind: List
+kind: Pod
 metadata:
-  resourceVersion: ""
-  selfLink: ""
+  annotations:
+    id: fba32f34a9b6716326445c7b39188d1856d5641fe86fb745bf5c18ba8e529124
+    sh_hyper_instancetype: s4
+    zone: gcp-us-central1-c
+  creationTimestamp: 2018-04-28T03:27:48Z
+  name: alpine
+  namespace: default
+  uid: 201c9851-4a94-11e8-a873-42010a7f0002
+spec:
+  containers:
+  - image: alpine
+    name: alpine
+    resources: {}
+  nodeName: gcp-us-central1
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: 2018-04-28T03:27:48Z
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: 2018-04-28T03:27:52Z
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: 2018-04-28T03:27:48Z
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: hyper://e406ce32bd88321677cdb3c52f3c21329f0b4c47bd38ee17c709ffcbe1759a62
+    image: sha256:3fd9065eaf02feaf94d68376da52541925650b81698c53c6824d92ff63f98353
+    imageID: sha256:3fd9065eaf02feaf94d68376da52541925650b81698c53c6824d92ff63f98353
+    lastState: {}
+    name: alpine
+    ready: true
+    restartCount: 0
+    state:
+      running:
+        startedAt: 2018-04-28T03:27:52Z
+  phase: Running
+  podIP: 10.244.106.62
+  qosClass: Burstable
+  startTime: 2018-04-28T03:27:48Z
 ```
 
 It shows you information about your pod, most of which is outside the scope of this section. You can see `sh_hyper_instancetype` however, which is useful for in case you cannot remember which size you started your pods as.
@@ -89,7 +81,7 @@ It shows you information about your pod, most of which is outside the scope of t
 We can use `pi exec` to run commands inside our pod. Let's login the busybo!
 
 ```sh
-$ pi pod exec alpine -c alpine -- cat /etc/issue
+$ pi exec alpine -c alpine -- cat /etc/issue
 Welcome to Alpine Linux 3.7
 Kernel \r on an \m (\l)
 ```

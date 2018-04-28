@@ -38,7 +38,6 @@ Now, let's create a file on the volume:
 
 ```sh
 $ pi exec busybox -c busybox -- echo "Hello World" > /data/hello.txt
-$
 ```
 
 To demonstrate the data persistence, we'll delete the pod, and create another a new one with the same volume to see whether the file is still there:

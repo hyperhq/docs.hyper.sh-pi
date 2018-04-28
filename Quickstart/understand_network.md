@@ -47,7 +47,7 @@ spec:
 EOF
 ```
 
-Then let's create the backend pod with the label `app: nginx`. Here we use Nginx image, which listens to port `80`:
+Then let's create the backend pod with the label `app:nginx`. Here we use Nginx image, which listens to port `80`:
 ```sh
 $ cat <<EOF > /tmp/nginx.yml
 apiVersion: v1
