@@ -22,7 +22,7 @@ _Pod_ is constrained to availabity zone. There is no way to migrate a pod to a d
 Pod Spec
 -------------------------
 
-_Pi_ uses the standard Kubernetes [Pod Spec](../Reference/v1.9/pod/index.md#pod-1):
+_Pi_ uses the standard Kubernetes [Pod Spec](../Reference/API/v1.9/pod/index.md#pod-1):
 
 ```yaml
 apiVersion: v1
