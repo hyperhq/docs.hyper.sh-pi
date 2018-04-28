@@ -16,7 +16,7 @@ set a name for floating IP
 
 | Parameter | Description |
 | --- | --- |
-| [FipNameRequest](#fipnamerequest) | |
+| [FipNameRequest](index.md#fipnamerequest) | |
 
 ### Response
 

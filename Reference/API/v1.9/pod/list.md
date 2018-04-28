@@ -16,6 +16,6 @@ list objects of kind Pod
 
 | Code | Description |
 | --- | --- |
-| 200 _[PodList](#podlist)_ | OK |
+| 200 _[PodList](index.md#podlist)_ | OK |
 | 400 | Bad Request |
 | 500 | Server Error |

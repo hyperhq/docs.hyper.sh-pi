@@ -10,12 +10,12 @@ create a Secret
 
 | Parameter |
 | --- |
-| body _[Secret](#secret)_ |
+| body _[Secret](index.md#secret)_ |
 
 ### Response
 
 | Code | Description |
 | --- | --- |
-| 201   _[Secret](#secret)_ | Created |
+| 201   _[Secret](index.md#secret)_ | Created |
 | 400 | Bad Request |
 | 500 | Server Error |

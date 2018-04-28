@@ -1,6 +1,6 @@
 # Understand Netoworking in _Pi_
 
-In [part 1](../Quickstart/launch_your_first_pod.md) we looked at starting, inspecting and interacting with a pod. In this section we’ll look at the network layer.
+In [part 1](../Quickstart/launching_your_first_pod.md) we looked at starting, inspecting and interacting with a pod. In this section we’ll look at the network layer.
 
 ![](https://trello-attachments.s3.amazonaws.com/5700ea0da7030dcf7485ed70/5a97dd05ecefd109f1b7e367/b6301e738fa97a06fad8140a2697c595/2.png)
 
@@ -86,8 +86,8 @@ $ pi delete pod nginx
 pod "nginx" deleted
 $ pi delete service test-loadbalancer
 service "test-loadbalancer" deleted
-$ pi delete fip 104.154.140
-fip "104.154.140" deleted
+$ pi delete fip 104.154.140.179
+fip "104.154.140.179" deleted
 ```
 
 > ***A note on FIP billing***:

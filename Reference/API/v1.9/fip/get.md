@@ -16,7 +16,7 @@ get a floating IPs
 
 | Code | Description |
 | --- | --- |
-| 200 _[FipResponse](#fipresponse) array_ | OK |
+| 200 _[FipResponse](index.md#fipresponse) array_ | OK |
 | 400 | Bad Request |
 | 404 | Not Found |
 | 500 | Server Error |

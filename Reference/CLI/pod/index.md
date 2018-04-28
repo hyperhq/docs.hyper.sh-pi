@@ -4,4 +4,4 @@
 - [get](get.md)
 - [exec](exec.md)
 - [run](run.md)
-- [delete](delete)
+- [delete](delete.md)

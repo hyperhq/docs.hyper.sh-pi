@@ -16,7 +16,7 @@ get the specified Secret
 
 | Code | Description |
 | --- | --- |
-| 200   _[Secret](#secret)_ | OK |
+| 200   _[Secret](index.md#secret)_ | OK |
 | 400 | Bad Request |
 | 404 | Not Found |
 | 500 | Server Error |

@@ -10,12 +10,12 @@ create a volume
 
 | Parameter | Description |
 | --- | --- |
-| [VolumeCreateRequest](#volumecreaterequest) | |
+| [VolumeCreateRequest](index.md#volumecreaterequest) | |
 
 ### Response
 
 | Code | Description |
 | --- | --- |
-| 201 _[FIP](#VolumeResponse)_ | OK |
+| 201 _[FIP](index.md#VolumeResponse)_ | OK |
 | 400 | Bad Request |
 | 500 | Server Error |

@@ -16,7 +16,7 @@ get the specified Service
 
 | Code | Description |
 | --- | --- |
-| 200   _[Service](#service)_ | OK |
+| 200   _[Service](index.md#service)_ | OK |
 | 400 | Bad Request |
 | 404 | Not Found |
 | 500 | Server Error |

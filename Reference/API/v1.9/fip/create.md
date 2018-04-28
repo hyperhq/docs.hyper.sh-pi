@@ -16,7 +16,7 @@ allocate floating IP
 
 | Code | Description |
 | --- | --- |
-| 201 _[FipResponse](#fipresponse) array_ | OK |
+| 201 _[FipResponse](index.md#fipresponse) array_ | OK |
 | 400 | Bad Request |
 | 500 | Server Error |
 
