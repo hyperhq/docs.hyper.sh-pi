@@ -3,4 +3,4 @@
 - [create](create.md)
 - [get](get.md)
 - [name](name.md)
-- [delete](delete)
+- [delete](delete.md)
