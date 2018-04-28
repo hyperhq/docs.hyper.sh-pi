@@ -12,7 +12,7 @@ FAQ
 
 ### How does networking work in Pi?
 > By default, _Pi_ creates a private network dedicated for each account, so as to separate different customers:
-> 
+>
 > - When you create a new pod, it is placed in your own network.
 > - Every pod receives a private IP address (specific to the network it resides in). The IP address is attached exclusively with the pod and is only returned when the pod is terminated.
 > - A pod is accessible in the network where it resides (using its private IP address), but no other networks.
@@ -29,11 +29,11 @@ Kernel \r on an \m (\l)
 ```
 
 ### What happens to my data when a pod terminates?
-> - The data stored on the pod's `rootfs` will persist only as long as that pod exists. 
+> - The data stored on the pod's `rootfs` will persist only as long as that pod exists.
 > - The data that is stored on additional volumes will persist independently of pods.
 
 ### Which datacenter is _Pi_ using?
-Similar with other platforms like [_Heroku_](heroku.com): _Pi_ does not run in our own datacenter, it runs on [Google Cloud](https://cloud.google.com/). Therefore, the region and zone naming in _Pi_ follows the pattern of GCP:
+Similar with other platforms like [_Heroku_](https://heroku.com): _Pi_ does not run in our own datacenter, it runs on [Google Cloud](https://cloud.google.com/). Therefore, the region and zone naming in _Pi_ follows the pattern of GCP:
 
 <table class="table table-bordered table-striped table-condensed">
 <tr>

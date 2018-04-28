@@ -25,7 +25,7 @@ creates a new exec configuration to run an exec process
 
 | Parameter |
 | --- |
-| [PodExecConfig](#podexecconfig) |
+| [PodExecConfig](index.md#podexecconfig) |
 
 ```
 $ pi exec nginx -c nginx -- echo hello
@@ -41,7 +41,7 @@ $ pi exec nginx -it -c nginx -- sh
 
 | Code | Description |
 | --- | --- |
-| 201 _[PodExecCreateResponse](#podexeccreateresponse)_ | OK |
+| 201 _[PodExecCreateResponse](index.md#podexeccreateresponse)_ | OK |
 | 400 | Bad Request |
 | 404 | Not Found |
 | 500 | Server Error |
@@ -69,7 +69,7 @@ starts an exec process already created
 
 | Parameter |
 | --- |
-| [PodExecConfig](#podexecconfig) |
+| [PodExecConfig](index.md#podexecconfig) |
 
 #### Response
 

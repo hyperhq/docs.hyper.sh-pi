@@ -16,7 +16,7 @@ Get the specified volume
 
 | Code | Description |
 | --- | --- |
-| 200 _[VolumeResponse](#volumeresponse)_ | OK |
+| 200 _[VolumeResponse](index.md#volumeresponse)_ | OK |
 | 400 | Bad Request |
 | 404 | Not Found |
 | 500 | Server Error |

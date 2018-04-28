@@ -16,7 +16,7 @@ delete a Pod
 
 | Parameter | Description |
 | --- | --- |
-| body _[DeleteOptions](#deleteoptions)_ | support gracePeriodSeconds |
+| body _[DeleteOptions](index.md#deleteoptions)_ | support gracePeriodSeconds |
 
 ### Response
 

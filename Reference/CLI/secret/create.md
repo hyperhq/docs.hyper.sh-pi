@@ -21,30 +21,13 @@ This command creates a new __Docker registry__ secret.
 $ pi create -f examples/secret/secret-dockerconfigjson.yaml
 secret/test-secret-dockerconfigjson
 
-//create via subcommand
+//create via subcommand (docker-registry secret)
 $ pi create secret docker-registry my-secret \
  --docker-server=DOCKER_REGISTRY_SERVER\
  --docker-username=DOCKER_USER\
  --docker-password=DOCKER_PASSWORD\
  --docker-email=DOCKER_EMAIL
-```
 
-### create docker-registry
-
-    Usage: pi create secret docker-registry NAME --docker-username=user --docker-password=password --docker-email=email [--docker-server=string] [OPTIONS]
-
-    create a docker registry secret
-
-              --append-hash                   Append a hash of the secret to its name.
-              --docker-email                  Email for Docker registry
-              --docker-password               Password for Docker registry authentication
-              --docker-server                 Server location for Docker registry
-              --docker-username               Username for Docker registry authentication
-
-```sh
-$ pi create secret docker-registry my-secret \
- --docker-server=DOCKER_REGISTRY_SERVER\
- --docker-username=DOCKER_USER\
- --docker-password=DOCKER_PASSWORD\
- --docker-email=DOCKER_EMAIL
+//create via subcommand (generic secret)
+$ pi create secret generic my-generic-secret --from-literal=key1=supersecret --from-literal=key2=topsecret
 ```

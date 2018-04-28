@@ -2,4 +2,4 @@
 
 - [create](create.md)
 - [get](get.md)
-- [delete](delete)
+- [delete](delete.md)

@@ -10,13 +10,13 @@ create a Service
 
 | Parameter |
 | --- |
-| body _[Service](#service)_ |
+| body _[Service](index.md#service)_ |
 
 ### Response
 
 | Code | Description |
 | --- | --- |
-| 201   _[Service](#service)_ | Created |
+| 201   _[Service](index.md#service)_ | Created |
 | 400 | Bad Request |
 | 500 | Server Error |
 

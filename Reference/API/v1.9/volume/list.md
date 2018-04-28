@@ -10,7 +10,7 @@ List volumes
 
 | Code | Description |
 | --- | --- |
-| 200 _[VolumeResponse](#volumeresponse) array_ | OK |
+| 200 _[VolumeResponse](index.md#volumeresponse) array_ | OK |
 | 400 | Bad Request |
 | 500 | Server Error |
 

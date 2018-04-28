@@ -10,12 +10,12 @@ create a Pod
 
 | Parameter |
 | --- |
-| body _[Pod](#pod-1)_ |
+| body _[Pod](index.md#pod-1)_ |
 
 ### Response
 
 | Code | Description |
 | --- | --- |
-| 201 _[Pod](#pod-1)_ | Created |
+| 201 _[Pod](index.md#pod-1)_ | Created |
 | 400 | Bad Request |
 | 500 | Server Error |

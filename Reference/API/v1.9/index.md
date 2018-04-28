@@ -7,7 +7,7 @@
 <td>Cloud</td><td>Region</td><td>Location</td><td>API Endpoint</td>
 </tr>
 <tr>
-<td>Google Cloud</td><td>gcp-us-central1</td><td>Iowa</td><td>tcp://gcp-us-central1.hyper.sh:443/api/v1/`</td>
+<td>Google Cloud</td><td>gcp-us-central1</td><td>Iowa</td><td>https://gcp-us-central1.hyper.sh:443/api/v1/</td>
 </tr>
 </table>
 
