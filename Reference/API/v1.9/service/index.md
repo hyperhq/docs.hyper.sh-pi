@@ -6,6 +6,12 @@
 
 Service is a named abstraction of software service (for example, mysql) consisting of local port (for example 3306) that the proxy listens on, and the selector that determines which pods will answer requests sent through the proxy.
 
+## METHOD
+- [create](create.md)
+- [list](list.md)
+- [get](get.md)
+- [delete](delete.md)
+
 ## Reference:
 
 ### Service

@@ -27,4 +27,5 @@ PING 35.226.x.x (35.226.x.x): 56 data bytes
 $ pi exec -it mysql -c mysql -- bash
 root@mysql:/# uname -r
 4.12.4-hyper
+root@mysql:/# exit
 ```

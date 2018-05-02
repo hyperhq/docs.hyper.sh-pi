@@ -2,6 +2,13 @@
 
 Floating IP is a public IPv4 address. This resource is allocated by clients and attached to pod.
 
+## METHOD
+- [create](create.md)
+- [list](list.md)
+- [get](get.md)
+- [delete](delete.md)
+- [name](name.md)
+
 ## Reference
 
 ### FipResponse
