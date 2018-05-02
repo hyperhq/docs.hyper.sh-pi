@@ -10,7 +10,7 @@ Delete one or more floating IP(s)
               -k, --secret-key                API secret key
               -r, --region                    Region name, default: gcp-us-central1
               -u, --user                      Username
-
+              --all                           Delete all fips
 ```sh
 $ pi delete fip 35.188.x.x 35.192.y.y
 fip "35.188.x.x" deleted

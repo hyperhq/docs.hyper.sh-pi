@@ -6,6 +6,13 @@
 
 Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts.
 
+## METHOD
+- [create](create.md)
+- [list](list.md)
+- [get](get.md)
+- [delete](delete.md)
+- [log](log.md)
+- [exec](exec.md)
 
 ## Reference:
 

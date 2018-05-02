@@ -80,9 +80,12 @@ $ cat ~/.pi/config
 
 - `get`         Display one or many resources
 - `delete`      Delete resources by resources and names
+- `run`         Run a pod with particular image.
 - `name`        Name a resource
 
 #### Troubleshooting and Debugging Commands:
+- `describe`    Show details of a specific resource or group of resources
+- `logs`        Print the logs for a container in a pod
 - `exec`        Execute a command in a container
 
 #### Other Commands:

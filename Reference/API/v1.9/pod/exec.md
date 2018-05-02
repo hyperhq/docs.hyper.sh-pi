@@ -126,7 +126,7 @@ changes the size of the tty
 
 #### HTTP Request
 
-`/api/v1/exec/{execID}/resize?h={height}&w={width}`
+`POST /api/v1/exec/{execID}/resize?h={height}&w={width}`
 
 #### Path Parameters
 
