@@ -13,9 +13,14 @@ get the specified Pod
 | fieldSelector | A selector to restrict the list of returned objects by their fields. |
 
 ```
-// {uid} is the uid of pod, service or secret, {name} is the name of pod, service or secret
+Example:
 /api/v1/namespaces/default/events?fieldSelector=involvedObject.uid%3D{uid}%2CinvolvedObject.name%3D{name}
+/api/v1/namespaces/default/events?fieldSelector=involvedObject.kind%3D{kind}%2CinvolvedObject.name%3D{name}
 ```
+- {uid} is the uid of resource, {name} is the name of resource, {kind} is the kind of resource
+- resource could be pod, service and secret
+- {kind} could be Pod, Service, Secret
+
 
 ### Response
 
