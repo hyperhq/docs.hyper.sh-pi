@@ -1,4 +1,4 @@
-# _Pi_ User Guide
+# Pi User Guide
 
 Welcome to Pi!
 
