@@ -65,28 +65,28 @@
           "name": "M2",
           "price": 0.0000288,
           "punit": "second",
-          "cpu": 2,
+          "cpu": 1,
           "memory": 2048
         },
         {
           "name": "M3",
           "price": 0.0000576,
           "punit": "second",
-          "cpu": 2,
+          "cpu": 1,
           "memory": 4096
         },
         {
           "name": "L1",
           "price": 0.0001152,
           "punit": "second",
-          "cpu": 4,
+          "cpu": 2,
           "memory": 8192
         },
         {
           "name": "L2",
           "price": 0.0002304,
           "punit": "second",
-          "cpu": 8,
+          "cpu": 4,
           "memory": 16384
         }
       ],
