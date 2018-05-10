@@ -10,7 +10,7 @@ _Secret_ is regional, e.g. you need to create secrets in different regions separ
 
 To create a new secret, use:
 ```
-$ pi secret create my-secret --docker-server=DOCKER_REGISTRY_SERVER --docker-username=DOCKER_USER --docker-password=DOCKER_PASSWORD --docker-email=DOCKER_EMAIL
+$ pi create secret docker-registry my-secret --docker-username=DOCKER_USER --docker-password=DOCKER_PASSWORD --docker-email=DOCKER_EMAIL
 ```
 - `docker-email`:		  Email for Docker registry
 - `docker-password`:	Password for Docker registry authentication

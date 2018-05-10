@@ -20,7 +20,7 @@ Lifecycle
 Unlike _Rootfs_, volumes are independent from pods. You need to explicitly create and delete volumes:
 
 ```sh
-$ pi volume create --size=1 --zone=gcp-us-central1-a vol1
+$ pi create volume vol1 --size=1 --zone=gcp-us-central1-a
 {
   "name": "vol1",
   "size": 1,
@@ -28,7 +28,7 @@ $ pi volume create --size=1 --zone=gcp-us-central1-a vol1
   "pod": "",
   "createdAt": "2018-03-12T03:05:45.764086754Z"
 }
-$ pi volume delete vol1
+$ pi delete volume vol1
 volume "vol1" deleted
 ```
 
@@ -53,7 +53,7 @@ spec:
       options:
         volumeID: "vol1"
 $ pi create -f /tmp/testvol.yml
-pod "testvol" created
+pod/testvol
 ```
 
 To verify the mount:
@@ -96,7 +96,7 @@ spec:
       options:
         volumeID: "vol1"
 $ pi create -f /tmp/testvol.yml
-pod "multi-mount" created
+pod/multi-mount
 ```
 
 Verify

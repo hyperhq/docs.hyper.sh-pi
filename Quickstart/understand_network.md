@@ -68,9 +68,10 @@ OK, let's create:
 
 ```sh
 $ pi create -f /tmp/service.yml
-service "test-loadbalancer" created
+service/test-loadbalancer
+
 $ pi create -f /tmp/nginx.yml
-pod "nginx" created
+pod/nginx
 ```
 
 Now you can open a browser and navigate to http://104.154.140.179:8080 where you’ll see Nginx home screen.

@@ -7,13 +7,14 @@ If you allocate a floating IP address but do not use it, you will be [charged fo
 Lifecycle
 ---------------------------
 
-You need to explicitly allocate and release floating IPs: 
+You need to explicitly allocate and release floating IPs:
 
 ```sh
-$ pi fip allocate
-104.197.12.87
-$ pi fip release 104.197.12.87
-fip "104.197.12.87" released
+$ pi create fip
+fip/104.197.12.87
+
+$ pi delete fip 104.197.12.87
+fip "104.197.12.87" deleted
 ```
 
 You cannot release an FIP while it is in use.
@@ -24,8 +25,9 @@ Associate Floating IP with Service
 Create a new service using an existing floating IP:
 
 ```sh
-$ pi fip allocate
-104.154.140.179
+$ pi create fip
+fip/104.154.140.179
+
 $ cat <<EOF > /tmp/httpLB.yml
 apiVersion: v1
 kind: Service
@@ -40,8 +42,8 @@ spec:
     - port: 80
       targetPort: 8080
 EOF
-$ pi service create -f /tmp/httpLB.yml
-service "httpLB" created
+$ pi create -f /tmp/httpLB.yml
+service/httpLB
 ```
 
 You can also associate multiple service to one floating IP, with different ports:
@@ -61,8 +63,8 @@ spec:
     - port: 443
       targetPort: 4433
 EOF
-$ pi service create -f /tmp/httpsLB.yml
-service "httpsLB" created
+$ pi create -f /tmp/httpsLB.yml
+service/httpsLB
 ```
 
 Billing

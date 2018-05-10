@@ -20,7 +20,7 @@ FAQ
 > - Service serves as load balancer in front of backend pods. For more detail see the background on [how services work](http://kubernetes.io/docs/user-guide/services).
 
 ### How to access a pod in Pi?
-Use [`pi pod exec`](../Reference/CLI/pod/exec.md) command:
+Use [`pi exec`](../Reference/CLI/pod/exec.md) command:
 
 ```sh
 $ pi exec alpine --container alpine -- cat /etc/issue

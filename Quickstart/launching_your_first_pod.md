@@ -14,7 +14,7 @@ spec:
     image: alpine
 EOF
 $ pi create -f /tmp/alpine.yml
-pod "alpine" created
+pod/alpine
 ```
 
 > **A note on pod size**
@@ -22,7 +22,7 @@ With Pi, a pod receives a certain amount computational resources (CPU, RAM). The
 
 ## Inspecting the pod
 
-Before we look at alpine itself, let’s take a look at how you can inspect your pod. 
+Before we look at alpine itself, let’s take a look at how you can inspect your pod.
 
 ```sh
 $ pi get pods alpine -o yaml
