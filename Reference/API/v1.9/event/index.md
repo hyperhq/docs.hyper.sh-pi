@@ -4,10 +4,10 @@
 | --- | --- | --- |
 | Core | v1 | EventList |
 
-## METHOD
-- [GET](get.md)
-
 EventList is a report of an event for a resource(pod,service...)
+
+## METHOD
+- [Get](get.md)
 
 ## Reference:
 

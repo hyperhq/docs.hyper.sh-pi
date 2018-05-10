@@ -1,4 +1,4 @@
 # Info
 
 ## METHOD
-- [get](get.md)
+- [Get](get.md)

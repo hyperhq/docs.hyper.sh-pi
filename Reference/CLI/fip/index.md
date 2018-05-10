@@ -2,5 +2,5 @@
 
 - [create](create.md)
 - [get](get.md)
-- [delete](delete.md)
 - [name](name.md)
+- [delete](delete.md)
