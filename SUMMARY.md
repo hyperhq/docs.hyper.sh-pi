@@ -18,6 +18,7 @@
 	* [Pod](Feature/pod.md)
 	* [Rootfs](Feature/rootfs.md)
 	* [Volume](Feature/volume.md)
+	* [Floating IP](Feature/fip.md)
 	* [Network](Feature/network.md)
 	* [Service](Feature/service.md)
 	* [Secret](Feature/secret.md)
