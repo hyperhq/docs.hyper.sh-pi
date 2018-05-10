@@ -29,7 +29,7 @@ metadata:
   annotations:
     id: 0ab3e519e570e25635b3835f2584ab61ff8f82f6c6fb6e656c41b40390ab6979
     sh_hyper_instancetype: s4
-    zone: gcp-us-central1-b
+    zone: gcp-us-central1-a
   creationTimestamp: 2018-04-19T03:25:57Z
   labels:
     name: mysql

@@ -19,14 +19,14 @@ List volumes
   {
     "name": "pt-test-performance",
     "size": 50,
-    "zone": "gcp-us-central1-b",
+    "zone": "gcp-us-central1-a",
     "pod": "",
     "createdAt": "2018-03-26T05:31:05.773Z"
   },
   {
     "name": "vol1",
     "size": 2,
-    "zone": "gcp-us-central1-b",
+    "zone": "gcp-us-central1-a",
     "pod": "mysql",
     "createdAt": "2018-04-18T07:17:04.242Z"
   }

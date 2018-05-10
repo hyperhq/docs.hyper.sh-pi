@@ -13,9 +13,7 @@ The current regions and availablity zones are:
 <td>Cloud</td><td>Region</td><td>Location</td><td>Zones</td>
 </tr>
 <tr>
-<td>Google Cloud</td><td>gcp-us-central1</td><td>Iowa</td><td>gcp-us-central1-a,
-gcp-us-central1-b,
-gcp-us-central1-c</td>
+<td>Google Cloud</td><td>gcp-us-central1</td><td>Iowa</td><td>gcp-us-central1-a,gcp-us-central1-c</td>
 </tr>
 </table>
 

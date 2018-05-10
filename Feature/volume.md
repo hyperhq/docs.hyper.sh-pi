@@ -1,6 +1,6 @@
 # Volume
 
-In _Pi_, volume is a persistent storage service to use with Pod. It offers high availability, durability, and consistent performance needed for stateful workloads. Multiple replicas will be automatically created with each volume to protect your data from failure. 
+In _Pi_, volume is a persistent storage service to use with Pod. It offers high availability, durability, and consistent performance needed for stateful workloads. Multiple replicas will be automatically created with each volume to protect your data from failure.
 
 ![](https://trello-attachments.s3.amazonaws.com/5700ea0da7030dcf7485ed70/5a9946fe778993901468c0e9/3b8092f3df5f47b45c57690998d91c2d/6.png)
 
@@ -8,7 +8,7 @@ Volumes are constrained by availability zone. You may switch volumes between pod
 
 - Volumes cannot be deleted or detached when it is attached to a pod.
 -  Volumes cannot be shared. There is no way tp attache a volume to multiple pods simultaneously.
-- Volumes will be automatically detached, when the associated pod terminated. 
+- Volumes will be automatically detached, when the associated pod terminated.
 
 Volume use the `EXT4` filesystem. A volume size must be integer, and between 1 and 50 (GB).
 
@@ -17,14 +17,14 @@ The max volume number a single pod can support is 4, though one volume can be mo
 Lifecycle
 ---------------------------
 
-Unlike _Rootfs_, volumes are independent from pods. You need to explicitly create and delete volumes: 
+Unlike _Rootfs_, volumes are independent from pods. You need to explicitly create and delete volumes:
 
 ```sh
 $ pi volume create --size=1 --zone=gcp-us-central1-a vol1
 {
   "name": "vol1",
   "size": 1,
-  "zone": "gcp-us-central1-b",
+  "zone": "gcp-us-central1-a",
   "pod": "",
   "createdAt": "2018-03-12T03:05:45.764086754Z"
 }
