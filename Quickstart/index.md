@@ -13,7 +13,5 @@ You’re now ready to start to explore Pi!
 
 - [Use volume for persistent data](../Quickstart/use_volume_for_persistent_data.md)
 
-- [Working with multi-container pod](../Quickstart/working_with_mulit-container_pod.md)
-
 >**Note on getting help**
 >If you get stuck at any point in this guide there are multiple ways to get support. The easiest and quickest is to use the chat window in bottom right of the web console. We try to answer all support requests within 24 hours. You can also post in [the forum](https://forum.hyper.sh/) or contact us on [Twitter](https://twitter.com/hyper_sh).

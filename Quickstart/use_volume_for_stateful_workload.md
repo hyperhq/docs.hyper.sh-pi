@@ -69,5 +69,3 @@ volume "data" deleted
 ```
 
 Volumes are billed per second. Therefore, it makes sense to delete them as soon as possible to save cost.
-
-In [the final section](../Quickstart/working_with_multi-container_pod.md) we'll see how multi-container pod works.
