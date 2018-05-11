@@ -13,9 +13,7 @@ The current regions and availablity zones are:
 <td>Cloud</td><td>Region</td><td>Location</td><td>Zones</td>
 </tr>
 <tr>
-<td>Google Cloud</td><td>gcp-us-central1</td><td>Iowa</td><td>gcp-us-central1-a,
-gcp-us-central1-b,
-gcp-us-central1-c</td>
+<td>Google Cloud</td><td>gcp-us-central1</td><td>Iowa</td><td>gcp-us-central1-a,gcp-us-central1-c</td>
 </tr>
 </table>
 
@@ -67,7 +65,7 @@ When you work with _Pi_ APIs, you must specify its regional endpoint:
 <td>Cloud</td><td>Region</td><td>Location</td><td>API Endpoint</td>
 </tr>
 <tr>
-<td>Google Cloud</td><td>gcp-us-central1</td><td>Iowa</td><td>tcp://gcp-us-central1.hyper.sh:443/api/v1.9</td>
+<td>Google Cloud</td><td>gcp-us-central1</td><td>Iowa</td><td>https://gcp-us-central1.hyper.sh:443/api/v1</td>
 </tr>
 </table>
 

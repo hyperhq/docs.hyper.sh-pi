@@ -1,22 +1,22 @@
 # Quota & Limits
- 
+
 _Pi_ has certain hard and soft (`quota`) limits in using its service. Hard limits are automatically enforced by the service. Soft limits are consumable resources that you may request to increase:
 
 ## Hard Limits
 - Max image size: 10 GB
 - Max containers per pod: 32
-- Max volumes per pod: 4
-- Private IP per pod: 1
+- Max flex volumes per pod: 4
+- Max pod json size: 128kb
+- Max secret json size: 4kb
 - Rootfs size: 10 GB
-- Volume size: 1 - 50 GB
-- Secrets per region: 8
-- Max secret size: 4kb
+- Volume size: 1 GB - 1024 GB
 
 ## Quota
 - Pod: 20 per region
 - Volume: 40 volumes per region
 - Service: 5 per region
 - Floating IP: 5 per region
+- Secrets: 8 per region
 - API Credential: 3 per region
 
 ### Request a quota increase

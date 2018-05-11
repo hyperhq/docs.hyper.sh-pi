@@ -21,13 +21,19 @@ This command creates a new __Docker registry__ secret.
 $ pi create -f examples/secret/secret-dockerconfigjson.yaml
 secret/test-secret-dockerconfigjson
 
-//create via subcommand (docker-registry secret)
-$ pi create secret docker-registry my-secret \
- --docker-server=DOCKER_REGISTRY_SERVER\
- --docker-username=DOCKER_USER\
- --docker-password=DOCKER_PASSWORD\
+//create secret for github registry
+$ pi create secret docker-registry secret-dockerhub \
+ --docker-username=DOCKER_USER \
+ --docker-password=DOCKER_PASSWORD \
  --docker-email=DOCKER_EMAIL
 
-//create via subcommand (generic secret)
+//create secret for gitlab registry
+$ pi create secret docker-registry secret-gitlab \
+ --docker-server=registry.gitlab.com \
+ --docker-username=GITLAB_USER \
+ --docker-password=GITLAB_PASSWORD \
+ --docker-email=GITLAB_EMAIL
+
+//create generic secret
 $ pi create secret generic my-generic-secret --from-literal=key1=supersecret --from-literal=key2=topsecret
 ```

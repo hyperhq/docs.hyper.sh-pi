@@ -2,7 +2,7 @@
 
 In _Pi_, objects of type `secret` are intended to hold sensitive information. Putting this information in a `secret` is safer and more flexible than putting it verbatim in a `pod` definition or in a docker image. See [Secrets design document](https://git.k8s.io/community/contributors/design-proposals/auth/secrets.md) for more information.
 
-> Currently, we only support Docker registry and generic secret, which is equivalent to [_kubectl create secret docker-registry_](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-secret-docker-registry-em-).
+> Currently, we only support Docker registry and generic secret, which is equivalent to [_kubectl create secret docker-registry_](https://v1-9.docs.kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-secret-docker-registry-em-).
 
 _Secret_ is regional, e.g. you need to create secrets in different regions separately.
 
@@ -10,7 +10,7 @@ _Secret_ is regional, e.g. you need to create secrets in different regions separ
 
 To create a new secret, use:
 ```
-$ pi secret create my-secret --docker-server=DOCKER_REGISTRY_SERVER --docker-username=DOCKER_USER --docker-password=DOCKER_PASSWORD --docker-email=DOCKER_EMAIL
+$ pi create secret docker-registry my-secret --docker-username=DOCKER_USER --docker-password=DOCKER_PASSWORD --docker-email=DOCKER_EMAIL
 ```
 - `docker-email`:		  Email for Docker registry
 - `docker-password`:	Password for Docker registry authentication

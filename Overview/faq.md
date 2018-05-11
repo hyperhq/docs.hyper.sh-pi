@@ -20,10 +20,10 @@ FAQ
 > - Service serves as load balancer in front of backend pods. For more detail see the background on [how services work](http://kubernetes.io/docs/user-guide/services).
 
 ### How to access a pod in Pi?
-Use [`pi pod exec`](../Reference/CLI/pod.md#Exec) command:
+Use [`pi exec`](../Reference/CLI/pod/exec.md) command:
 
 ```sh
-$ pod exec alpine --container alpine -- cat /etc/issue
+$ pi exec alpine --container alpine -- cat /etc/issue
 Welcome to Alpine Linux 3.7
 Kernel \r on an \m (\l)
 ```
@@ -40,9 +40,7 @@ Similar with other platforms like [_Heroku_](https://heroku.com): _Pi_ does not 
 <td>Cloud</td><td>Region</td><td>Location</td><td>Zones</td>
 </tr>
 <tr>
-<td>Google Cloud</td><td>gcp-us-central1</td><td>Iowa</td><td>gcp-us-central1-a,
-gcp-us-central1-b,
-gcp-us-central1-c</td>
+<td>Google Cloud</td><td>gcp-us-central1</td><td>Iowa</td><td>gcp-us-central1-a,gcp-us-central1-c</td>
 </tr>
 </table>
 

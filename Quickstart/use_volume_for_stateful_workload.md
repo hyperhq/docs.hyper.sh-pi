@@ -5,8 +5,8 @@ In [the previous chapter](../Quickstart/understand_network.md) we learned how to
 First you'll need to create a volume:
 
 ```sh
-$ pi volume create data --zone gcp-us-central1-a --size 10
-volume data(10GB) created in zone gcp-us-central1-a
+$ pi create volume data --zone gcp-us-central1-a --size 10
+volume/data
 ```
 
 Next, we will launch a busybox pod with this volume:

@@ -16,6 +16,6 @@ Create new volume
 Volume is zone-specific. You may use the `--zone` flag to choose which availability zone the volume will reside in. If is absent, the volume will be created in the default zone of your account. Volume name is region-wise unique, e.g. no two volumes in the same region can have the same volume name.
 
 ```sh
-$ pi create volume vol1 --size=1 --zone=gcp-us-central1-b
+$ pi create volume vol1 --size=1 --zone=gcp-us-central1-a
 volume/vol1
 ```

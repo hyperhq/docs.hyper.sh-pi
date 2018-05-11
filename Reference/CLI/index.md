@@ -10,15 +10,15 @@ We currently provides official CLI builds for Linux and Mac.
 
 - Linux x86
 ```sh
-$ wget https://hyper-install.s3.amazonaws.com/pi-linux-x86_64.tar.gz
-$ tar xzf pi-linux-x86_64.tar.gz
+$ wget https://hyper-install.s3.amazonaws.com/pi.linux-amd64.tar.gz
+$ tar xzf pi.linux-amd64.tar.gz
 $ ./pi
 ```
 
 - Mac OS X 10.7 (lion) or later
 ```
-$ curl -O https://hyper-install.s3.amazonaws.com/pi-mac.bin.zip
-$ unzip pi-mac.bin.zip
+$ curl -O https://hyper-install.s3.amazonaws.com/pi.darwin-amd64.zip
+$ unzip pi.darwin-amd64.zip
 $ ./pi
 ```
 

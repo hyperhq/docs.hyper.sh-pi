@@ -26,7 +26,7 @@ spec:
     image: nginx
 EOF
 $ pi create -f /tmp/multi-basic.yml
-pod "multi-basic" created
+pod/multi-basic
 ```
 
 You can access a particular container by specifying the container name in the `pod exec` command:
