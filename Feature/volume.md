@@ -21,15 +21,7 @@ Unlike _Rootfs_, volumes are independent from pods. You need to explicitly creat
 
 ```sh
 $ pi create volume vol1 --size=1 --zone=gcp-us-central1-a
-{
-  "name": "vol1",
-  "size": 1,
-  "zone": "gcp-us-central1-a",
-  "pod": "",
-  "createdAt": "2018-03-12T03:05:45.764086754Z"
-}
-$ pi delete volume vol1
-volume "vol1" deleted
+volume/vol1
 ```
 
 To mount volumes to a container:
@@ -47,11 +39,15 @@ spec:
     volumeMounts:
     - name: data
       mountPath: /data
+  nodeSelector:
+    zone: gcp-us-central1-a
   volumes:
   - name: data
     flexVolume:
       options:
-        volumeID: "vol1"
+        volumeID: vol1
+EOF
+
 $ pi create -f /tmp/testvol.yml
 pod/testvol
 ```
@@ -63,16 +59,25 @@ $ pi exec testvol -c test -- df -hT
 Filesystem           Type            Size      Used Available Use% Mounted on
 /dev/sdb             ext4            9.7G     37.3M      9.2G   0% /
 devtmpfs             devtmpfs      242.5M         0    242.5M   0% /dev
-tmpfs                tmpfs         247.1M         0    247.1M   0% /dev/shm
+tmpfs                tmpfs         247.0M         0    247.0M   0% /dev/shm
 /dev/sda             ext4          975.9M      2.5M    906.2M   0% /data
-share_dir            9p             14.6G     12.0K     14.6G   0% /var/run/secrets/kubernetes.io/serviceaccount
-share_dir            9p            200.0G    132.1G     67.9G  66% /etc/hosts
-share_dir            9p            200.0G    132.1G     67.9G %
+share_dir            9p             29.4G     12.0K     29.4G   0% /var/run/secrets/kubernetes.io/serviceaccount
+share_dir            9p            500.0G      5.9G    494.1G   1% /etc/hosts
+share_dir            9p            500.0G      5.9G    494.1G   1% /dev/termination-log
+
+$ pi delete pods testvol --now
+pod "testvol" deleted
+
+$ pi delete volume vol1
+volume "vol1" deleted
 ```
 
 You can also mount the same volume to different mountpoints of the same container.
 
 ```sh
+$ pi create volume vol2 --size=1
+volume/vol2
+
 $ cat <<EOF > /tmp/multi-mount.yml
 apiVersion: v1
 kind: Pod
@@ -94,17 +99,25 @@ spec:
   - name: data
     flexVolume:
       options:
-        volumeID: "vol1"
-$ pi create -f /tmp/testvol.yml
+        volumeID: vol2
+EOF
+
+$ pi create -f /tmp/multi-mount.yml
 pod/multi-mount
 ```
 
 Verify
 
 ```sh
-$ pi exec multi-mount -c test1 -- echo "Hello World" > /data/helloworld.txt
+$ pi exec multi-mount -c test1 -- sh -c 'echo "Hello World" > /data/helloworld.txt'
 $ pi exec multi-mount -c test2 -- cat /mnt/data/helloworld.txt
 Hello World
+
+$ pi delete pods multi-mount --now
+pod "multi-mount" deleted
+
+$ pi delete volume vol2
+volume "vol2" deleted
 ```
 
 Permissions
