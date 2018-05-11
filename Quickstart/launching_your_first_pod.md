@@ -107,6 +107,6 @@ In Pi, all resources are billed per-second (apart from _Service_). The billing f
 So the total monthly price for running a pod at s4 size is **$8.76**. You can always check your current usage costs in the [Hyper console](https://console.hyper.sh/billing/credit).
 
 >**Note on pricing**
->Remember that Hyper allows you to choose the size of your pod at start time so the billing information above applies to this example only. Check the pricing page for more information: [https://hyper.sh/pricing.html](https://hyper.sh/pricing.html)
+>Remember that Hyper allows you to choose the size of your pod at start time so the billing information above applies to this example only. Check the pricing page for more information: [https://hyper.sh/pi/pricing.html](https://hyper.sh/pricing.html)
 
 That's it for part 1. In [the next chapter](../Quickstart/understand_network.md) we'll learn about how network works in _Pi_.
