@@ -11,7 +11,6 @@ Print the logs for a container in a pod.
           -r, --region                    Region name, default: gcp-us-central1
           -u, --user                      Username
           -c, --container                 Print the logs of this container
-          -f, --follow                    Specify if the logs should be streamed.
           --limit-bytes                   Maximum bytes of logs to return. Defaults to no limit.
           --pod-running-timeout           The length of time (like 5s, 2m, or 3h, higher than zero) to wait until at least one pod is running
           -p, --previous                  If true, print the logs for the previous instance of the container in a pod if it exists.
