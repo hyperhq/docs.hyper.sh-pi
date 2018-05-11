@@ -25,7 +25,7 @@ To expose a _service_ on the Internet, a _Floating IP_ must be associated with t
 
 ```bash
 $ pi create fip
-104.154.140.179
+fip/104.154.140.179
 ```
 
 Next define the service spec. Here we use the `LoadBalancer` type with the allocated floating IP, and use `selector` for pods with the label `app: nginx`, finally map the port to `80`:
@@ -85,8 +85,10 @@ Floating IPs are independent from the pod, therefore you need to release them se
 ```sh
 $ pi delete pod nginx
 pod "nginx" deleted
+
 $ pi delete service test-loadbalancer
 service "test-loadbalancer" deleted
+
 $ pi delete fip 104.154.140.179
 fip "104.154.140.179" deleted
 ```
