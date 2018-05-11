@@ -32,7 +32,7 @@ $ cat <<EOF > /tmp/httpLB.yml
 apiVersion: v1
 kind: Service
 metadata:
-  name: httpLB
+  name: http-lb
 spec:
   type: LoadBalancer
   loadBalancerIP: 104.154.140.179
@@ -43,7 +43,7 @@ spec:
       targetPort: 8080
 EOF
 $ pi create -f /tmp/httpLB.yml
-service/httpLB
+service/http-lb
 ```
 
 You can also associate multiple service to one floating IP, with different ports:
@@ -53,7 +53,7 @@ $ cat <<EOF > /tmp/httpsLB.yml
 apiVersion: v1
 kind: Service
 metadata:
-  name: httpsLB
+  name: https-lb
 spec:
   type: LoadBalancer
   loadBalancerIP: 104.154.140.179
@@ -64,7 +64,7 @@ spec:
       targetPort: 4433
 EOF
 $ pi create -f /tmp/httpsLB.yml
-service/httpsLB
+service/https-lb
 ```
 
 Billing
