@@ -1,6 +1,6 @@
 # Service
 
-A `Service` is an abstraction which defines a logical set of `Pods` and a policy by which to access them - sometimes called a micro-service. The set of `Pods` targeted by a `Service` is (usually) determined by a [`Label Selector`](/docs/concepts/overview/working-with-objects/labels/#label-selectors) (see below for why you might want a `Service` without a selector).
+A `Service` is an abstraction which defines a logical set of `Pods` and a policy by which to access them - sometimes called a micro-service. The set of `Pods` targeted by a `Service` is (usually) determined by a [`Label Selector`](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors) (see below for why you might want a `Service` without a selector).
 
 As an example, consider an image-processing backend which is running with 3 replicas.  Those replicas are fungible - frontends do not care which backend they use.  While the actual `Pods` that compose the backend set may change, the frontend clients should not need to be aware of that or keep track of the list of backends themselves.  The `Service` abstraction enables this decoupling.
 
@@ -8,7 +8,7 @@ _Service_ is regional. You can associate pods in all availibity zones of the sam
 
 ## Defining a service
 
-A `Service` in Kubernetes is a REST object, similar to a `Pod`.  Like all of the REST objects, a `Service` definition can be POSTed to the apiserver to create a new instance.  For example, suppose you have a set of `Pods` that each expose port 9376 and carry a label `"app=MyApp"`. 
+A `Service` in Kubernetes is a REST object, similar to a `Pod`.  Like all of the REST objects, a `Service` definition can be POSTed to the apiserver to create a new instance.  For example, suppose you have a set of `Pods` that each expose port 9376 and carry a label `"app=MyApp"`.
 
 ```yaml
 kind: Service
@@ -63,7 +63,7 @@ For some parts of your application (e.g. frontends) you may want to expose a Ser
 `Type` values and their behaviors are:
 
    * `ClusterIP`: Exposes the service on an interal IP. Choosing this value makes the service only reachable from within the internal network. This is the default `ServiceType`.
-   * `LoadBalancer`: Exposes the service externally using a _floating IP_. 
+   * `LoadBalancer`: Exposes the service externally using a _floating IP_.
 
 ### Type LoadBalancer
 

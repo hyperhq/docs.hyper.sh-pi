@@ -11,6 +11,6 @@ list objects of kind Secret
 
 | Code | Description |
 | --- | --- |
-| 200 _[SecretList](#secretlist)_ | OK |
+| 200 _[SecretList](index.md#secretlist)_ | OK |
 | 400 | Bad Request |
 | 500 | Server Error |

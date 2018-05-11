@@ -84,12 +84,12 @@ Check that pi is properly configured by getting the region information:
 $ pi info
 Region Info:
   Region                 gcp-us-central1
-  AvailabilityZone       gcp-us-central1-b|UP
+  AvailabilityZone       gcp-us-central1-a|UP
   ServiceClusterIPRange  10.96.0.0/12
 Account Info:
   Email                  user1@test.com
   TenantID               00a54ebcc0444bb384e48f6fd7b5597b
-  DefaultZone            gcp-us-central1-b
+  DefaultZone            gcp-us-central1-a
   Resources              pod:1/20,volume:1/40,fip:1/5,service:4/5,secret:1/3
 Version Info:
   Version                alpha-0.4

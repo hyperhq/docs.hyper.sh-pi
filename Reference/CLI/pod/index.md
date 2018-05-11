@@ -2,5 +2,8 @@
 
 - [create](create.md)
 - [get](get.md)
+- [describe](describe.md)
+- [logs](logs.md)
 - [exec](exec.md)
-- [delete](delete)
+- [run](run.md)
+- [delete](delete.md)

@@ -1,6 +1,6 @@
 # Understand Netoworking in _Pi_
 
-In [part 1](../Quickstart/launch_your_first_pod.md) we looked at starting, inspecting and interacting with a pod. In this section we’ll look at the network layer.
+In [part 1](../Quickstart/launching_your_first_pod.md) we looked at starting, inspecting and interacting with a pod. In this section we’ll look at the network layer.
 
 ![](https://trello-attachments.s3.amazonaws.com/5700ea0da7030dcf7485ed70/5a97dd05ecefd109f1b7e367/b6301e738fa97a06fad8140a2697c595/2.png)
 
@@ -25,7 +25,7 @@ To expose a _service_ on the Internet, a _Floating IP_ must be associated with t
 
 ```bash
 $ pi create fip
-104.154.140.179
+fip/104.154.140.179
 ```
 
 Next define the service spec. Here we use the `LoadBalancer` type with the allocated floating IP, and use `selector` for pods with the label `app: nginx`, finally map the port to `80`:
@@ -47,7 +47,7 @@ spec:
 EOF
 ```
 
-Then let's create the backend pod with the label `app: nginx`. Here we use Nginx image, which listens to port `80`:
+Then let's create the backend pod with the label `app:nginx`. Here we use Nginx image, which listens to port `80`:
 ```sh
 $ cat <<EOF > /tmp/nginx.yml
 apiVersion: v1
@@ -68,9 +68,10 @@ OK, let's create:
 
 ```sh
 $ pi create -f /tmp/service.yml
-service "test-loadbalancer" created
+service/test-loadbalancer
+
 $ pi create -f /tmp/nginx.yml
-pod "nginx" created
+pod/nginx
 ```
 
 Now you can open a browser and navigate to http://104.154.140.179:8080 where you’ll see Nginx home screen.
@@ -84,10 +85,12 @@ Floating IPs are independent from the pod, therefore you need to release them se
 ```sh
 $ pi delete pod nginx
 pod "nginx" deleted
+
 $ pi delete service test-loadbalancer
 service "test-loadbalancer" deleted
-$ pi delete fip 104.154.140
-fip "104.154.140" deleted
+
+$ pi delete fip 104.154.140.179
+fip "104.154.140.179" deleted
 ```
 
 > ***A note on FIP billing***:

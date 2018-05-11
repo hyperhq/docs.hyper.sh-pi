@@ -12,7 +12,7 @@ FAQ
 
 ### How does networking work in Pi?
 > By default, _Pi_ creates a private network dedicated for each account, so as to separate different customers:
-> 
+>
 > - When you create a new pod, it is placed in your own network.
 > - Every pod receives a private IP address (specific to the network it resides in). The IP address is attached exclusively with the pod and is only returned when the pod is terminated.
 > - A pod is accessible in the network where it resides (using its private IP address), but no other networks.
@@ -20,29 +20,27 @@ FAQ
 > - Service serves as load balancer in front of backend pods. For more detail see the background on [how services work](http://kubernetes.io/docs/user-guide/services).
 
 ### How to access a pod in Pi?
-Use [`pi pod exec`](../Reference/CLI/pod.md#Exec) command:
+Use [`pi exec`](../Reference/CLI/pod/exec.md) command:
 
 ```sh
-$ pod exec alpine --container alpine -- cat /etc/issue
+$ pi exec alpine --container alpine -- cat /etc/issue
 Welcome to Alpine Linux 3.7
 Kernel \r on an \m (\l)
 ```
 
 ### What happens to my data when a pod terminates?
-> - The data stored on the pod's `rootfs` will persist only as long as that pod exists. 
+> - The data stored on the pod's `rootfs` will persist only as long as that pod exists.
 > - The data that is stored on additional volumes will persist independently of pods.
 
 ### Which datacenter is _Pi_ using?
-Similar with other platforms like [_Heroku_](heroku.com): _Pi_ does not run in our own datacenter, it runs on [Google Cloud](https://cloud.google.com/). Therefore, the region and zone naming in _Pi_ follows the pattern of GCP:
+Similar with other platforms like [_Heroku_](https://heroku.com): _Pi_ does not run in our own datacenter, it runs on [Google Cloud](https://cloud.google.com/). Therefore, the region and zone naming in _Pi_ follows the pattern of GCP:
 
 <table class="table table-bordered table-striped table-condensed">
 <tr>
 <td>Cloud</td><td>Region</td><td>Location</td><td>Zones</td>
 </tr>
 <tr>
-<td>Google Cloud</td><td>gcp-us-central1</td><td>Iowa</td><td>gcp-us-central1-a,
-gcp-us-central1-b,
-gcp-us-central1-c</td>
+<td>Google Cloud</td><td>gcp-us-central1</td><td>Iowa</td><td>gcp-us-central1-a,gcp-us-central1-c</td>
 </tr>
 </table>
 

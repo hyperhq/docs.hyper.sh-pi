@@ -5,8 +5,8 @@ In [the previous chapter](../Quickstart/understand_network.md) we learned how to
 First you'll need to create a volume:
 
 ```sh
-$ pi volume create data --zone gcp-us-central1-a --size 10
-volume data(10GB) created in zone gcp-us-central1-a
+$ pi create volume data --zone gcp-us-central1-a --size 10
+volume/data
 ```
 
 Next, we will launch a busybox pod with this volume:
@@ -24,6 +24,8 @@ spec:
     volumeMounts:
     - name: data
       mountPath: /data
+  nodeSelector:
+    zone: gcp-us-central1-a
   volumes:
   - name: data
     flexVolume:
@@ -37,17 +39,20 @@ pod/busybox
 Now, let's create a file on the volume:
 
 ```sh
-$ pi exec busybox -c busybox -- echo "Hello World" > /data/hello.txt
-$
+$ pi exec busybox -c busybox -- sh -c 'echo "Hello World" > /data/hello.txt'
+$ pi exec busybox -c busybox -- cat /data/hello.txt
+Hello World
 ```
 
 To demonstrate the data persistence, we'll delete the pod, and create another a new one with the same volume to see whether the file is still there:
 
 ```sh
-$ pi delete pod busybox
+$ pi delete pod busybox --now
 pod "busybox" deleted
+
 $ pi create -f /tmp/busybox.yml
 pod/busybox
+
 $ pi exec busybox -c busybox -- cat /data/hello.txt
 Hello World
 ```
@@ -64,6 +69,7 @@ Volumes are indepedent resources, and only removable when they are not mounted.
 ```sh
 $ pi delete pod busybox
 pod "busybox" deleted
+
 $ pi delete volume data
 volume "data" deleted
 ```

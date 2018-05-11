@@ -2,6 +2,12 @@
 
 Volume is a persistent storage to store data. This resource is created by clients and mounted to pod.
 
+## METHOD
+- [Create](create.md)
+- [List](list.md)
+- [Get](get.md)
+- [Delete](delete.md)
+
 ## Reference
 
 ### VolumeCreateRequest

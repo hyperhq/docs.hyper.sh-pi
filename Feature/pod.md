@@ -22,7 +22,7 @@ _Pod_ is constrained to availabity zone. There is no way to migrate a pod to a d
 Pod Spec
 -------------------------
 
-_Pi_ uses the standard Kubernetes [Pod Spec](../Reference/v1.9/pod.md#pod-v1-core):
+_Pi_ uses the standard Kubernetes [Pod Spec](../Reference/API/v1.9/pod/index.md#pod-1):
 
 ```yaml
 apiVersion: v1
@@ -37,12 +37,12 @@ spec:
     - containerPort: 80
 ```
 
-The API accepts a JSON string for _Pod Spec_. If you want to use YAML format, please see [our Go SDK](../Reference/v1.9/sdk.md#go). 
+The API accepts a JSON string for _Pod Spec_.
 
 Pod Size
 -------------------------
 
-A pod receives a certain amount computational resources (CPU, RAM), which are shared by all application containers within the pod. We provide a set of resource configurations (aka _Pod Size_)for you to choose when launching a new pod. Different sizes come with difference prices (See [our pricing page](../overview/pricing.md) for more details).
+A pod receives a certain amount computational resources (CPU, RAM), which are shared by all application containers within the pod. We provide a set of resource configurations (aka _Pod Size_)for you to choose when launching a new pod. Different sizes come with difference prices (See [our pricing page](../Overview/pricing.md) for more details).
 
 The size of a pod is automatically calculated based on the pod spec, and applied to the pod when it is started:
 
@@ -92,7 +92,7 @@ In the above spec, four containers are present:
 - The momory limits of _nginx3_ is `0.5Mi`, which is `0.5GB`.
 - The momory limits of _nginx4_ is `1Mi`, which is `1GB`.
 
-The total memory limits is: `0 + 0 + 0.5 + 1 = 1.5GB`, then the pod size will be `M2 (2GB)`. 
+The total memory limits is: `0 + 0 + 0.5 + 1 = 1.5GB`, then the pod size will be `M2 (2GB)`.
 
 Termination of Pods
 -------------------------

@@ -16,7 +16,7 @@ get the specified Pod
 
 | Code | Description |
 | --- | --- |
-| 200 _[Pod](#pod-1)_ | OK |
+| 200 _[Pod](index.md#pod-1)_ | OK |
 | 400 | Bad Request |
 | 404 | Not Found |
 | 500 | Server Error |

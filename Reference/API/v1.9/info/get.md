@@ -15,8 +15,8 @@ get region and account info
 
 ```
 {
-  "AvailabilityZone": "gcp-us-central1-b|UP",
-  "DefaultZone": "gcp-us-central1-b",
+  "AvailabilityZone": "gcp-us-central1-a|UP,gcp-us-central1-c|UP",
+  "DefaultZone": "gcp-us-central1-a",
   "Email": "user@test.com",
   "Region": "gcp-us-central1",
   "Resources": "pod:1/10,volume:3/10,fip:5/10,service:-7/10,secret:1/11",

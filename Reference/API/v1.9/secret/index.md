@@ -6,6 +6,12 @@
 
 Secret holds secret data of a certain type. The total bytes of the values in the Data field must be less than MaxSecretSize bytes.
 
+## METHOD
+- [Create](create.md)
+- [List](list.md)
+- [Get](get.md)
+- [Delete](delete.md)
+
 ## Reference:
 
 ### Secret

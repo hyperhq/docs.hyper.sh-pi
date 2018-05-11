@@ -1,6 +1,6 @@
 # Network
 
-![](https://trello-attachments.s3.amazonaws.com/5700ea0da7030dcf7485ed70/5a97dd05ecefd109f1b7e367/d515b403538d8e9f040ed1b20a9eb486/4.png)
+![](https://trello-attachments.s3.amazonaws.com/5700ea0da7030dcf7485ed70/5a97dd05ecefd109f1b7e367/b6301e738fa97a06fad8140a2697c595/2.png)
 
 - Every account is assigned a default Layer-2 virtual private network in each region.
 - Networks are isolated from each other and the Internet.

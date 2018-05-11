@@ -16,7 +16,7 @@ Get the specified volume
 
 | Code | Description |
 | --- | --- |
-| 200 _[VolumeResponse](#volumeresponse)_ | OK |
+| 200 _[VolumeResponse](index.md#volumeresponse)_ | OK |
 | 400 | Bad Request |
 | 404 | Not Found |
 | 500 | Server Error |
@@ -25,7 +25,7 @@ Get the specified volume
 {
   "name": "vol1",
   "size": 2,
-  "zone": "gcp-us-central1-b",
+  "zone": "gcp-us-central1-a",
   "pod": "mysql",
   "createdAt": "2018-04-18T07:17:04.242Z"
 }

@@ -4,4 +4,4 @@ _Pi_ uses the standard, upstream Kubernetes API. To learn more details about Kub
 
 The following are the supported API version:
 
-* [1.9](./v1.9/index.md)
+* [1.9](./API/v1.9/index.md)

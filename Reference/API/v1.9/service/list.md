@@ -11,6 +11,6 @@ list objects of kind Service
 
 | Code | Description |
 | --- | --- |
-| 200 _[ServiceList](#servicelist)_ | OK |
+| 200 _[ServiceList](index.md#servicelist)_ | OK |
 | 400 | Bad Request |
 | 500 | Server Error |

@@ -1,7 +1,7 @@
 What is Pi?
 -----------------------------
 
-> If you have questions about whether _Pi_ is right for you, [contact Hyper Sales](contact@hyper.sh). If you have technical questions about Pi, use the [our forum](https://forum.hyper.sh), or contact us on [Twitter](https://twitter.com/hyper_sh).
+> If you have questions about whether _Pi_ is right for you, [contact Hyper Sales](mailto:contact@hyper.sh). If you have technical questions about Pi, use the [our forum](https://forum.hyper.sh), or contact us on [Twitter](https://twitter.com/hyper_sh).
 
 _Pi_ is a **Serverless Container Platform**. It is the simplest and fastest way to run containers in the cloud, bypassing all those infrastructure headaches, to let companies of all sizes embrace the value of containers immediately.
 
@@ -20,8 +20,10 @@ You might compare _Pi_ with [Function-as-a-Service](https://en.wikipedia.org/wik
 <tr>
 <td>Supported Language</td><td>Anything (Code, Binary, Shell Script, etc.)</td><td>Limited</td>
 </tr>
+<tr>
 <td>API</td><td>Kubernetes Pod API</td><td>AWS Specific</td>
 </tr>
+<tr>
 <td>Execution Instance</td><td>Container (Pod)</td><td>Function Call</td>
 </tr>
 </table>
