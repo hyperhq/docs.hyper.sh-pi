@@ -25,6 +25,7 @@ spec:
   - name: nginx
     image: nginx
 EOF
+
 $ pi create -f /tmp/multi-basic.yml
 pod/multi-basic
 ```
@@ -33,18 +34,19 @@ You can access a particular container by specifying the container name in the `p
 
 ```sh
 $ pi exec -it multi-basic --container busybox -- /bin/sh
+
 $ pi exec -it multi-basic -c nginx -- /bin/sh
 ```
 
 > Note:
 > If _--container_ is absent, the first container in the pod spec will be the default container to execute the command.
 
-Now, let's these two containers' filesystem:
+Now, let's check these two containers' filesystem:
 
 ```sh
-$ pi exec multi-basic --container busybox -- file /etc/nginx.conf
-/etc/nginx.conf: cannot open '/etc/nginx.conf' (No such file or directory)
+$ pi exec multi-basic --container busybox -- ls /etc/nginx/nginx.conf
+ls: /etc/nginx/nginx.conf: No such file or directory
 
-$ pi exec multi-basic --container nginx -- file /etc/nginx.conf
-/etc/nginx/nginx.conf: ASCII English text
+$ pi exec multi-basic --container nginx -- ls /etc/nginx/nginx.conf
+/etc/nginx/nginx.conf
 ```

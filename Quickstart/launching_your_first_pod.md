@@ -13,6 +13,7 @@ spec:
   - name: alpine
     image: alpine
 EOF
+
 $ pi create -f /tmp/alpine.yml
 pod/alpine
 ```
