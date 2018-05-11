@@ -9,7 +9,7 @@ A _pod_ (as in a pod of whales or pea pod) is a group of one or more containers 
 
 ![Pod Overview](https://trello-attachments.s3.amazonaws.com/5700ea0da7030dcf7485ed70/5a8ea6c5a9972aaaaa7fec5c/d4de3e6c38d156e393eac25f09919b5a/1.png)
 
-Containers within a pod share an IP address and port space, and can find each other via `localhost`. They can also communicate with each other using standard inter-process communications like SystemV semaphores or POSIX shared memory.  Containers in different pods have distinct IP addresses and can not communicate by IPC. These containers usually communicate with each other via Pod IP addresses.
+Containers within a pod share an IP address and port space, and can find each other via `localhost`. They can also communicate with each other using standard inter-process communications like SystemV semaphores or POSIX shared memory.  Containers in different pods have distinct IP addresses and cannot communicate by IPC. These containers usually communicate with each other via Pod IP addresses.
 
 Applications within a pod also have access to shared volumes, which are defined as part of a pod and are made available to be mounted into each application's filesystem.
 
@@ -17,7 +17,7 @@ Like individual application containers, pods are considered to be relatively eph
 
 When something is said to have the same lifetime as a pod, such as a _[rootfs](../Feature/rootfs.md)_, that means that it exists as long as that pod (with that UID) exists. If that pod is deleted for any reason, even if an identical replacement is created, the related thing (e.g. volume) is also destroyed and created anew.
 
-_Pod_ is constrained to availabity zone. There is no way to migrate a pod to a different zone except to recreate it. Pod name is regional, e.g. no two pods in the same region can have the same pod name.
+_Pod_ is constrained to an availability zone. There is no way to migrate a pod to a different zone except to recreate it. Pod name is regional, e.g. no two pods in the same region can have the same pod name.
 
 Pod Spec
 -------------------------
@@ -42,7 +42,7 @@ The API accepts a JSON string for _Pod Spec_.
 Pod Size
 -------------------------
 
-A pod receives a certain amount computational resources (CPU, RAM), which are shared by all application containers within the pod. We provide a set of resource configurations (aka _Pod Size_)for you to choose when launching a new pod. Different sizes come with difference prices (See [our pricing page](../Overview/pricing.md) for more details).
+A pod receives a certain amount of computational resources (CPU, RAM), which are shared by all application containers within the pod. We provide a set of resource configurations (aka _Pod Size_)for you to choose when launching a new pod. Different sizes come with difference prices (See [our pricing page](../Overview/pricing.md) for more details).
 
 The size of a pod is automatically calculated based on the pod spec, and applied to the pod when it is started:
 
@@ -50,9 +50,9 @@ The size of a pod is automatically calculated based on the pod spec, and applied
   - `spec.containers[].resources.limits.cpu`  
   - `spec.containers[].resources.requests.cpu`
   - `spec.containers[].resources.requests.memory`
-- If a container has no `spec.containers[].resources.limits.memory` feild, it is counted as `0`.
+- If a container has no `spec.containers[].resources.limits.memory` field, it is counted as `0`.
 - The pod size will be the nearest size that has no less memory than the sum value, e.g. `M1 (1GB)` in the case of 912MB
-- If no memory limits are specifed in the spec, the default pod size is `S4`.
+- If no memory limits are specified in the spec, the default pod size is `S4`.
 - Currently, the largest pod size we support is `L2 (16GB)`. If your pod requires more memory than this, the API request will be rejected.
 
  For example:
@@ -88,9 +88,9 @@ spec:
 
 In the above spec, four containers are present:
 - _nginx1_ has no memory limits, then it is counted as `0`.
-- The momory limits of _nginx2_ is `0`, it is counted as `0`.
-- The momory limits of _nginx3_ is `0.5Mi`, which is `0.5GB`.
-- The momory limits of _nginx4_ is `1Mi`, which is `1GB`.
+- The memory limit of _nginx2_ is `0`, it is counted as `0`.
+- The memory limit of _nginx3_ is `0.5Mi`, which is `0.5GB`.
+- The memory limit of _nginx4_ is `1Mi`, which is `1GB`.
 
 The total memory limits is: `0 + 0 + 0.5 + 1 = 1.5GB`, then the pod size will be `M2 (2GB)`.
 
@@ -108,7 +108,7 @@ An example flow:
 5. When the grace period expires, any processes still running in the Pod are killed with SIGKILL.
 6. _Pi_ will finish deleting the Pod on the API server by setting grace period 0 (immediate deletion). The Pod disappears from the API and is no longer visible from the client.
 
-By default, all deletes are graceful within 30 seconds. User mayto override the default and specify their own value. The value `0` [force deletes](../Feature/pod.md#force-deletion-of-pods) the pod.
+By default, all deletes are graceful within 30 seconds. User may override the default and specify their own value. The value `0` [force deletes](../Feature/pod.md#force-deletion-of-pods) the pod.
 
 Force deletion of pods
 -------------------------
