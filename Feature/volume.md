@@ -72,7 +72,7 @@ $ pi delete volume vol1
 volume "vol1" deleted
 ```
 
-You can also mount the same volume to different mountpoints of the same container.
+You can also mount the same volume to different mountpoints of the different containers.
 
 ```sh
 $ pi create volume vol2 --size=1
