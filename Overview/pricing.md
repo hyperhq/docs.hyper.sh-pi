@@ -54,7 +54,7 @@ Similar with [Google Compute Engine](https://cloud.google.com/compute/pricing), 
 	- A default duration of 60 seconds is applied.
 
 - **Volume**:
-	- The volume size ranges from 10 to 50 GB, and the default size is 10GB.
+	- The volume size ranges from 10 to 1024 GB, and the default size is 10GB.
 	- Volume is independent from the pod's lifecycle. Thus, the billing begins when a volume is created, ends upon removal.
 	- A default duration of 60 seconds is applied.
 
