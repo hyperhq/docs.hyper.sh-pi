@@ -88,6 +88,34 @@
           "punit": "second",
           "cpu": 4,
           "memory": 16384
+        },
+        {
+          "name": "L3",
+          "price": 0.0004608,
+          "punit": "second",
+          "cpu": 8,
+          "memory": 32768
+        },
+        {
+          "name": "L4",
+          "price": 0.0009216,
+          "punit": "second",
+          "cpu": 16,
+          "memory": 61440
+        },
+        {
+          "name": "L5",
+          "price": 0.0018432,
+          "punit": "second",
+          "cpu": 32,
+          "memory": 122880
+        },
+        {
+          "name": "L6",
+          "price": 0.0036864,
+          "punit": "second",
+          "cpu": 64,
+          "memory": 245760
         }
       ],
       "rootfs": {
