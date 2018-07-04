@@ -9,7 +9,7 @@ Pod is a collection of containers that can run on a host. This resource is creat
 ## METHOD
 - [Create](create.md)
 - [List](list.md)
-- [Get](get.md)
+- [Read](Read.md)
 - [Log](log.md)
 - [Exec](exec.md)
 - [Delete](delete.md)

@@ -9,7 +9,7 @@ Secret holds secret data of a certain type. The total bytes of the values in the
 ## METHOD
 - [Create](create.md)
 - [List](list.md)
-- [Get](get.md)
+- [Read](read.md)
 - [Delete](delete.md)
 
 ## Reference:

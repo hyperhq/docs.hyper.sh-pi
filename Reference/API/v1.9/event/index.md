@@ -7,7 +7,7 @@
 EventList is a report of an event for a resource(pod,service...)
 
 ## METHOD
-- [Get](get.md)
+- [Read](read.md)
 
 ## Reference:
 

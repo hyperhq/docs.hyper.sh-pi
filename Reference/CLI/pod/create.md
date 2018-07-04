@@ -2,7 +2,7 @@ create
 ------------------------------
 Create new pod
 
-    Usage: pi [OPTIONS] create -f FILENAME
+    Usage: pi create pod [OPTIONS] 
 
     Create a new pod
 
@@ -15,6 +15,5 @@ Create new pod
 The `create` command submits the pod request specified in the pod spec file to _Pi_.
 
 ```sh
-$ pi create -f pod-nginx.yaml
-pod/nginx
+TODO
 ```
