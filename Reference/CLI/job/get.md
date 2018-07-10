@@ -17,8 +17,13 @@ List jobs or get a job
 
 ```sh
 //list jobs
-TODO
+$ pi get jobs
+NAME      DESIRED   SUCCESSFUL   AGE
+job1      1         0            5m
+job2      1         0            1m
 
 //get a pod
-TODO
+$ pi get jobs job1
+NAME      DESIRED   SUCCESSFUL   AGE
+job1      1         0            6m
 ```
