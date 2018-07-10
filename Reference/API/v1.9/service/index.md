@@ -9,7 +9,7 @@ Service is a named abstraction of software service (for example, mysql) consisti
 ## METHOD
 - [Create](create.md)
 - [List](list.md)
-- [Get](get.md)
+- [Read](read.md)
 - [Delete](delete.md)
 
 ## Reference:

@@ -1,6 +1,6 @@
-Get
+Read
 ---------------------------------
-get the specified Pod
+read the specified Event
 
 ### HTTP Request
 
