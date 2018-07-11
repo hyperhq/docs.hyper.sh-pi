@@ -32,6 +32,7 @@ pod/nginx
               --active-deadline-seconds       Optional duration in seconds the pod may be active on the node relative to StartTime before the system will actively try to mark it failed and kill associated containers. Value must be a positive integer.
               --env                           Environment variables to set in the container
               --image                         The image for the container to run.
+              --image-pull-policy             The image pull policy for the container. If left empty, this value will not be specified by the client and defaulted by the server
               --image-pull-secrets            The secret for the private docker registry, comma separated.
               -l, --labels                    Comma separated labels to apply to the pod(s). Will override previous values.
               --limits                        The resource requirement limits for this container. For example, 'cpu=200m,memory=512Mi'.
