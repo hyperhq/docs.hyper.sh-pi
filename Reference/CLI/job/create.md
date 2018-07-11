@@ -2,6 +2,24 @@ create
 ------------------------------
 Create new job
 
+## create via yaml file
+    Usage: pi [OPTIONS] create -f FILENAME
+  
+      Create a new job
+
+              -e, --access-key                API access key
+              -k, --secret-key                API secret key
+              -r, --region                    Region name, default: gcp-us-central1
+              -u, --user                      Username
+              -f, --filename                  Filename, directory, or URL to files to use to create the job, support yaml or json
+
+```
+$ pi create -f job-test.yaml
+job/job-test
+```
+
+## create via command line
+
     Usage: pi create job JOB --image [OPTIONS] -- [COMMAND] [args...]
 
     Create a new job

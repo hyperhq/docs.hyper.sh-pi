@@ -2,6 +2,25 @@ create
 ------------------------------
 Create new pod
 
+## create via yaml file
+    Usage: pi [OPTIONS] create -f FILENAME
+  
+      Create a new pod
+
+              -e, --access-key                API access key
+              -k, --secret-key                API secret key
+              -r, --region                    Region name, default: gcp-us-central1
+              -u, --user                      Username
+              -f, --filename                  Filename, directory, or URL to files to use to create the pod, support yaml or json
+
+```
+# Start a single instance of nginx.
+$ pi create -f pod-nginx.yaml
+pod/nginx
+```
+
+## create via command line
+
     Usage: pi create pod [OPTIONS]
 
     Create a new pod
