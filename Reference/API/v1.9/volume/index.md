@@ -5,7 +5,7 @@ Volume is a persistent storage to store data. This resource is created by client
 ## METHOD
 - [Create](create.md)
 - [List](list.md)
-- [Get](get.md)
+- [Read](read.md)
 - [Delete](delete.md)
 
 ## Reference

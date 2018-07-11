@@ -5,7 +5,7 @@
 What is a Pod?
 -------------------------
 
-A _pod_ (as in a pod of whales or pea pod) is a group of one or more containers (such as Docker containers), with shared storage/network, and a specification for how to run the containers.  A pod's contents are always co-located and co-scheduled, and run in a shared context.  A pod models an application-specific "logical host" - it contains one or more application containers which are relatively tightly coupled &mdash; in a pre-container world, they would have executed on the same physical or virtual machine.
+A _pod_ (as in a pod of whales or pea pod) is a group of one or more containers (such as Docker containers), with shared storage/network, and a specification for how to run the containers.  A pod's contents are always co-located and co-scheduled, and run in a shared context. 
 
 ![Pod Overview](https://trello-attachments.s3.amazonaws.com/5700ea0da7030dcf7485ed70/5a8ea6c5a9972aaaaa7fec5c/d4de3e6c38d156e393eac25f09919b5a/1.png)
 
@@ -44,7 +44,7 @@ Pod Size
 
 A pod receives a certain amount of computational resources (CPU, RAM), which are shared by all application containers within the pod. We provide a set of resource configurations (aka _Pod Size_)for you to choose when launching a new pod. Different sizes come with difference prices (See [our pricing page](../Overview/pricing.md) for more details).
 
-The size of a pod is automatically calculated based on the pod spec, and applied to the pod when it is started:
+When you create a pod, you may specify the size of the pod. Alternatively, the pod size is automatically calculated based on the pod spec, and applied to the pod when it is started:
 
 - Calculate the sum of `spec.containers[].resources.limits.memory` field of all containers in the pod spec, and ignore the rest, e.g.:
   - `spec.containers[].resources.limits.cpu`  

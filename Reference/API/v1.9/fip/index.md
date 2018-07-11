@@ -5,7 +5,7 @@ Floating IP is a public IPv4 address. This resource is allocated by clients and 
 ## METHOD
 - [Create](create.md)
 - [List](list.md)
-- [Get](get.md)
+- [Read](read.md)
 - [Name](name.md)
 - [Delete](delete.md)
 
