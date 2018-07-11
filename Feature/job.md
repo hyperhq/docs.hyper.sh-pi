@@ -12,7 +12,7 @@ Here is an example Job config.  It computes π to 2000 places and prints it out.
 It takes around 10s to complete.
 
 ```shell
-$ pi create job pi --image=pi --restart=Never --backoff-limit=4 -- perl -Mbignum=bpi -wle "print bpi(2000)"
+$ pi create job pi --image=perl --restart=Never --backoff-limit=4 -- perl -Mbignum=bpi -wle "print bpi(2000)"
 job "pi" created
 ```
 
