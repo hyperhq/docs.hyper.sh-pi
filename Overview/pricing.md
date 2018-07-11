@@ -27,10 +27,10 @@ _Pi_ use a _pay-per-use_ billing model, similar to other cloud services, such li
 |M3 | 1|  4GB|$0.0000576 |
 |L1 | 2|  8GB|$0.0001152 |
 |L2 | 4| 16GB|$0.0002304 |
-|L3 | 8| 32GB|$0.0004608 |
-|L4 |16| 60GB|$0.0009216 |
-|L5 |32|120GB|$0.0018432 |
-|L6 |64|240GB|$0.0036864 |
+|L3 | 8| 30GB|$0.0004608 |
+|L4 |16| 50GB|$0.0009216 |
+|L5 |32| 110G|$0.0018432 |
+|L6 |64| 230G|$0.0036864 |
 
 #### Automatic Sustained Use Discounts
 Similar with [Google Compute Engine](https://cloud.google.com/compute/pricing), your Pods will qualify for a sustained use discount. The discounts are applied automatically and will be calculated and added to your bill. There is no action needed on your part to enable sustained use discounts.
