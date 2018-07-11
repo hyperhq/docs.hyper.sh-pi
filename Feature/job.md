@@ -12,7 +12,7 @@ Here is an example Job config.  It computes π to 2000 places and prints it out.
 It takes around 10s to complete.
 
 ```shell
-$ pi create job pi --image=pi --restart=Never --backoffLimit=4 -- perl -Mbignum=bpi -wle print bpi(2000)
+$ pi create job pi --image=pi --restart=Never --backoff-limit=4 -- perl -Mbignum=bpi -wle "print bpi(2000)"
 job "pi" created
 ```
 
@@ -139,7 +139,7 @@ old jobs after noting their status.  Delete the job with `pi` (e.g. `pi delete j
 
 By default, a Job will run uninterrupted unless a Pod fails, at which point the Job defers to the `backoffLimit` described above. Another way to terminate a Job is by setting an active deadline. Do this by setting the `activeDeadlineSeconds` field of the Job to a number of seconds.
 
-The `activeDeadlineSeconds` applies to the duration of the job, no matter how many Pods are created. Once a Job reaches `activeDeadlineSeconds`, the Job and all of its Pods are terminated. The result is that the job has a status with `reason: DeadlineExceeded`. 
+The `activeDeadlineSeconds` applies to the duration of the job, no matter how many Pods are created. Once a Job reaches `activeDeadlineSeconds`, the Job and all of its Pods are terminated. The result is that the job has a status with `reason: DeadlineExceeded`.
 
 Note that a Job's `activeDeadlineSeconds` takes precedence over its `backoffLimit`. Therefore, a Job that is retrying one or more failed Pods will not deploy additional Pods once it reaches the time limit specified by `activeDeadlineSeconds`, even if the `backoffLimit` is not yet reached.
 
