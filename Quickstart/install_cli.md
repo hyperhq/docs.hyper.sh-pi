@@ -33,6 +33,8 @@ $ unzip pi.darwin-amd64.zip
 $ ./pi help
 ```
 
+> or download binary from https://github.com/hyperhq/pi/releases
+
 ## Configure pi
 
 In order for the CLI to find and access a region, it needs a configuration file, which, by default, is located at `~/.pi/config`.
