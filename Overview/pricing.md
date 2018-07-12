@@ -1,32 +1,36 @@
 # Pricing & Billing
 
-_Pi_ use a _pay-per-use_ billing model, similar to other cloud services, such like AWS EC2. You pay only for the resources you use by the second, no minimum fee. 
+_Pi_ use a _pay-per-use_ billing model, similar to other cloud services, such like AWS EC2. You pay only for the resources you use by the second, no minimum fee.
 
-> To see your bill, go to your [billing history](https://console.hyper.sh/billing/history). Your bill contains links to usage reports that provide details about your bill. 
+> To see your bill, go to your [billing history](https://console.hyper.sh/billing/history). Your bill contains links to usage reports that provide details about your bill.
 
 #### Compute
-	
+
 - **Image**:
 	- Image is a self-contained package that includes application, configuration and data. _Pi_ will pull your images from 3rd-party registry and launch them. We do not offer our own registry at the moment.
 	- Currently image is **FREE**.
 
 - **Pod**:
-	- Pod is charged by the computational resources it consumes (CPU, RAM) and the duration it runs (by the second). 	
-	- We provide a set of predefined resource configurations for you to choose when launching pods. Different configurations come with different resource specifications, thus different price.  
+	- Pod is charged by the computational resources it consumes (CPU, RAM) and the duration it runs (by the second).
+	- We provide a set of predefined resource configurations for you to choose when launching pods. Different configurations come with different resource specifications, thus different price.
 	- Billing begins when a pod is started, ends when the pod terminates (through API call), or exits (success or failure).
 	- Everytime a pod is started, a default duration of 60 seconds is applied. If a pod runs for 40s, it will be billed for 60s; if it runs for 100s, it is billed for 100s.
 
 |Size|CPU|Mem|Per Second|
 |:-:|:-:|:-:|:-:|
-|S1 |1|64MB |$0.00000222|
-|S2 |1|128MB|$0.00000354|
-|S3 |1|256MB|$0.00000564|
-|S4 |1|512MB|$0.000009  |  
-|M1 |1|  1GB|$0.0000144 |
-|M2 |1|  2GB|$0.0000288 |
-|M3 |1|  4GB|$0.0000576 |
-|L1 |2|  8GB|$0.0001152 |
-|L2 |4| 16GB|$0.0002304 |
+|S1 | 1|64MB |$0.00000222|
+|S2 | 1|128MB|$0.00000354|
+|S3 | 1|256MB|$0.00000564|
+|S4 | 1|512MB|$0.000009  |
+|M1 | 1|  1GB|$0.0000144 |
+|M2 | 1|  2GB|$0.0000288 |
+|M3 | 1|  4GB|$0.0000576 |
+|L1 | 2|  8GB|$0.0001152 |
+|L2 | 4| 16GB|$0.0002304 |
+|L3 | 8| 30GB|$0.0004608 |
+|L4 |16| 50GB|$0.0009216 |
+|L5 |32| 110G|$0.0018432 |
+|L6 |64| 230G|$0.0036864 |
 
 #### Automatic Sustained Use Discounts
 Similar with [Google Compute Engine](https://cloud.google.com/compute/pricing), your Pods will qualify for a sustained use discount. The discounts are applied automatically and will be calculated and added to your bill. There is no action needed on your part to enable sustained use discounts.
@@ -44,13 +48,13 @@ Similar with [Google Compute Engine](https://cloud.google.com/compute/pricing), 
 > - The rest of the month: 3600*(24\*30-1)*$0.0000048 = $12.42432
 >
 > - Total: $0.00864 + $0.0288 + $12.42432 = $12.46176
- 
+
 #### Storage
 
 - **Rootfs**:
 	- A pod may have one or more containers.
 	- Every container come with a default 10GB rootfs, e.g. if a pod have 3 containers, the pod has three rootfs, 30GB in total.
-	- Rootfs exits along with the lifecycle of the pod. Billing begins when the pod is created, ends when the pod terminates or exists. 
+	- Rootfs exits along with the lifecycle of the pod. Billing begins when the pod is created, ends when the pod terminates or exists.
 	- A default duration of 60 seconds is applied.
 
 - **Volume**:
@@ -68,11 +72,11 @@ Similar with [Google Compute Engine](https://cloud.google.com/compute/pricing), 
 #### Network
 - **Traffic**:
 	- Currently all network traffic are **Free**.
-- **Service**: 
+- **Service**:
 	- $0.03/hour
 	- Billing begins when a new service is created, ends when it is deleted. Partial hour will be counted as an hour.
 	- A default duration of 1 hour is applied.
-- **Floating IP**: 
+- **Floating IP**:
 	- If you allocate a floating IP address but do not use it, you will be charged with an hourly rate. If you use it (with _Service_), you will not be charged for it.
 
 |Type|Hourly|
