@@ -13,6 +13,7 @@
 	* [Launch Your First Pod](Quickstart/launching_your_first_pod.md)
 	* [Understand the network](Quickstart/understand_network.md)
 	* [Use Volume for Stateful Workload](Quickstart/use_volume_for_stateful_workload.md)
+	* [Use Private Image](Quickstart/use_private_image.md)
 * [Feature](Feature/index.md)
 	* [Pod](Feature/pod.md)
 	* [Rootfs](Feature/rootfs.md)
